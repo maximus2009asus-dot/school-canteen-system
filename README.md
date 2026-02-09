@@ -39,6 +39,7 @@
 ---
 
 ## Структура проекта
+```
 school-canteen-system/
 ├── backend/ # Django-приложение
 │ ├── api/ # Модели, views, сериализаторы
@@ -48,7 +49,7 @@ school-canteen-system/
 │ │ ├── pages/ # HomeUser, CookDashboard, AdminHome
 │ │ └── components/ # Модальные окна, меню
 └── README.md
-
+```
 ---
 ## Реализованные функции (в соответствии с регламентом)
 - Регистрация и авторизация пользователей
