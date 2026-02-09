@@ -1,0 +1,257 @@
+.home-user {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    font-family: Arial, sans-serif;
+}
+
+.user-header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user-info h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.user-info p {
+    margin: 10px 0 0 0;
+    opacity: 0.9;
+}
+
+.user-balance {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.balance-card {
+    text-align: center;
+}
+
+.balance-card h3 {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+}
+
+.balance-amount {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #2ecc71;
+}
+
+.add-balance-btn {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.add-balance-btn:hover {
+    background-color: #27ae60;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 30px;
+    padding: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.main-content {
+    background-color: transparent;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sidebar-card h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.sidebar-card p {
+    color: #34495e;
+    margin: 10px 0;
+}
+
+.sidebar-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.sidebar-btn:hover {
+    background-color: #2980b9;
+}
+
+.sidebar-btn.secondary {
+    background-color: #2ecc71;
+}
+
+.sidebar-btn.secondary:hover {
+    background-color: #27ae60;
+}
+
+.today-info {
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.user-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .user-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .sidebar {
+        grid-template-columns: 1fr;
+    }
+}
+
+.user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.user-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.settings-btn-header {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.settings-btn-header:hover {
+    background-color: #2980b9;
+}
+
+
+
+/* Отзывы */
+.reviews-list {
+    margin-bottom: 16px;
+}
+
+.review-item {
+    background: #f8f9fa;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.meal-type {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.rating {
+    color: #ffc107;
+}
+
+.review-comment {
+    margin: 6px 0;
+    color: #495057;
+}
+
+.review-date {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+.no-reviews, .see-more {
+    color: #6c757d;
+    font-style: italic;
+}
+
+
+.logout-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+
+.logout-btn:hover {
+    background: #c82333;
+}
