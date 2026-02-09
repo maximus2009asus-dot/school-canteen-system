@@ -40,40 +40,14 @@
 
 ## Структура проекта
 school-canteen-system/
-├── backend/ # Django-бэкенд
-│ ├── api/
-│ │ ├── models.py # Модели: User, MenuItem, Review и др.
-│ │ ├── serializers.py # Сериализаторы DRF
-│ │ ├── views.py # API-обработчики (WeeklyMenuView, CookDashboardView и др.)
-│ │ ├── urls.py # Маршруты API
-│ │ └── ...
-│ ├── backend/
-│ │ ├── settings.py # Настройки Django
-│ │ ├── urls.py # Корневые маршруты
-│ │ └── wsgi.py
-│ ├── manage.py
-│ └── requirements.txt
-│
-├── frontend/ # React-фронтенд
-│ ├── public/
+├── backend/ # Django-приложение
+│ ├── api/ # Модели, views, сериализаторы
+│ └── backend/ # Настройки, маршруты
+├── frontend/ # React-приложение
 │ ├── src/
-│ │ ├── App.jsx
-│ │ ├── main.jsx
-│ │ ├── pages/ # Страницы для ролей
-│ │ │ ├── HomeUser.jsx # Ученик
-│ │ │ ├── CookDashboard.jsx # Повар
-│ │ │ └── AdminHome.jsx # Администратор
-│ │ ├── components/ # Reusable компоненты
-│ │ │ ├── WeeklyMenu.jsx
-│ │ │ ├── PaymentModal.jsx
-│ │ │ ├── ReviewModal.jsx
-│ │ │ └── ...
-│ │ └── styles/ # CSS-файлы
-│ ├── vite.config.js
-│ └── package.json
-│
-├── README.md
-└── .gitignore
+│ │ ├── pages/ # HomeUser, CookDashboard, AdminHome
+│ │ └── components/ # Модальные окна, меню
+└── README.md
 
 ---
 ## Реализованные функции (в соответствии с регламентом)
