@@ -41,14 +41,54 @@
 ## Структура проекта
 ```
 school-canteen-system/
-├── backend/ # Django-приложение
-│ ├── api/ # Модели, views, сериализаторы
-│ └── backend/ # Настройки, маршруты
-├── frontend/ # React-приложение
-│ ├── src/
-│ │ ├── pages/ # HomeUser, CookDashboard, AdminHome
-│ │ └── components/ # Модальные окна, меню
-└── README.md
+├── backend/                          # Django-бэкенд
+│   ├── api/                          # Логика API
+│   │   ├── __init__.py
+│   │   ├── models.py                 # Модели: User, MenuItem, Review, Subscription, PurchaseRequest и др.
+│   │   ├── serializers.py            # Сериализаторы DRF
+│   │   ├── views.py                  # API-обработчики (WeeklyMenuView, CookDashboardView и др.)
+│   │   ├── urls.py                   # Маршруты API (/api/menu/weekly/, /api/cook/dashboard/ и т.д.)
+│   │   └── admin.py                  # Админка Django
+│   ├── backend/                      # Настройки проекта
+│   │   ├── __init__.py
+│   │   ├── settings.py               # Конфигурация Django (SECRET_KEY, INSTALLED_APPS и др.)
+│   │   ├── urls.py                   # Корневые маршруты (включает api.urls)
+│   │   └── wsgi.py                   # WSGI-интерфейс для развертывания
+│   ├── manage.py                     # Утилита Django
+│   ├── requirements.txt              # Зависимости (djangorestframework, python-decouple и др.)
+│   └── db.sqlite3                    # База данных (SQLite)
+│
+├── frontend/                         # React-фронтенд (Vite)
+│   ├── public/
+│   │   └── vite.svg
+│   ├── src/
+│   │   ├── App.jsx                   # Основной компонент с роутингом
+│   │   ├── main.jsx                  # Точка входа
+│   │   ├── api.js                    # Базовый URL и обёртка fetch/axios
+│   │   ├── constants.js              # Константы (ACCESS_TOKEN и др.)
+│   │   ├── components/               # Reusable UI-компоненты
+│   │   │   ├── AllergiesModal.jsx
+│   │   │   ├── LoadingIndicator.jsx
+│   │   │   ├── PaymentModal.jsx
+│   │   │   ├── ReviewModal.jsx
+│   │   │   ├── WeeklyMenu.jsx        # Главный компонент меню
+│   │   │   └── ...
+│   │   ├── pages/                    # Страницы для ролей
+│   │   │   ├── HomeUser.jsx          # Ученик
+│   │   │   ├── CookDashboard.jsx     # Повар
+│   │   │   └── AdminHome.jsx         # Администратор
+│   │   ├── styles/                   # CSS-файлы (по компонентам)
+│   │   │   ├── AdminHome.css
+│   │   │   ├── CookDashboard.css
+│   │   │   └── ...
+│   │   └── assets/                   # Статика (иконки, SVG)
+│   ├── vite.config.js                # Конфигурация Vite (proxy на /api → localhost:8000)
+│   ├── package.json
+│   └── .env                          # Переменные окружения (VITE_API_BASE_URL)
+│
+├── README.md                         # Документация (этот файл)
+├── .gitignore                        # Исключения для Git
+└── LICENSE                           # Лицензия (если есть)
 ```
 ---
 ## Реализованные функции (в соответствии с регламентом)
